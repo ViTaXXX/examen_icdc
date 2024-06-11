@@ -25,7 +25,7 @@ pipeline {
                 stage('Construir_imagen') {
                     steps {
                         script {
-                            newApp = docker.build("andresdocker77/examen_icdc2:v1")
+                            newApp = docker.build("andresdocker77/examen_icdc2:latest")
                         }
                     }
                 }

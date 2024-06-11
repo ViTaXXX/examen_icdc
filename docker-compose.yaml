@@ -2,7 +2,7 @@ version: '3.7'
 services:
   crud:
     container_name: crud
-    image: andresdocker77/examen_icdc2:v1
+    image: andresdocker77/examen_icdc2:latest
     restart: always
     environment:
       DB_HOST: mariadb
