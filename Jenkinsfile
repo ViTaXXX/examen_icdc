@@ -46,7 +46,7 @@ pipeline {
                 script {
                     sshagent(credentials: ['SSH_KEY3']) {
                         sh 'ssh -o StrictHostKeyChecking=no andres@rinnegan.fernandezds.es wget https://raw.githubusercontent.com/ViTaXXX/examen_icdc/main/docker-compose.yaml -O docker-compose.yaml'
-                        sh 'ssh -o StrictHostKeyChecking=no andres@rinnegan.fernandezds.es docker compose up -d'
+                        sh 'ssh -o StrictHostKeyChecking=no andres@rinnegan.fernandezds.es docker compose up -d --force-recreate'
                     }
                 }
             }
