@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  crud:
+    container_name: crud
+    image: andresdocker77/crud:v1
+    restart: always
+    environment:
+      DB_HOST: mariadb
+      DB_NAME: admin
+      DB_USER: admin
+      DB_PASSWORD: admin
+    ports:
+      - 8081:80
+    depends_on:
+      - mariadb
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: admin
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mariadb:/var/lib/mysql
+volumes:
+  mariadb:
