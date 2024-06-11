@@ -18,11 +18,6 @@ pipeline {
                         git branch: 'main', url: 'https://github.com/ViTaXXX/examen_icdc.git'
                     }
                 }
-                stage('Requisitos') {
-                    steps {
-                        sh 'pip install -r requirements.txt'
-                    }
-                }
             }
         }
         stage("Crear_la_imagen") {
