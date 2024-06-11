@@ -11,6 +11,8 @@ services:
       DB_PASSWORD: admin
     ports:
       - 8081:80
+    volumes:
+      - crud:/var/www/html
     depends_on:
       - mariadb
   mariadb:
@@ -26,3 +28,4 @@ services:
       - mariadb:/var/lib/mysql
 volumes:
   mariadb:
+  crud:
